@@ -1,6 +1,7 @@
 package com.example.imgurstory.ui.detail_screen;
 
 import android.content.Context;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,15 +11,16 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.imgurstory.R;
+import com.example.imgurstory.repository.remote.model.comments.CommentListData;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class CommentListAdapter extends RecyclerView.Adapter<CommentListAdapter.ViewHolder> {
 
     private final LayoutInflater mInflater;
-    private List<String> mCommentList;
+    private ArrayList<CommentListData> mCommentList;
 
-    public CommentListAdapter(Context context, List<String> commentList){
+    public CommentListAdapter(Context context, ArrayList<CommentListData> commentList) {
         mCommentList = commentList;
         mInflater = LayoutInflater.from(context);
     }
@@ -31,12 +33,14 @@ public class CommentListAdapter extends RecyclerView.Adapter<CommentListAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.mCommentTv.setText(position);
+        CommentListData commentData = mCommentList.get(position);
+        String comment = "<b>" + commentData.getAuthor() + "</b>: " + commentData.getComment();
+        holder.mCommentTv.setText(Html.fromHtml(comment));
     }
 
     @Override
     public int getItemCount() {
-        if (mCommentList != null){
+        if (mCommentList != null) {
             return mCommentList.size();
         }
         return 0;
@@ -46,7 +50,7 @@ public class CommentListAdapter extends RecyclerView.Adapter<CommentListAdapter.
 
         private TextView mCommentTv;
 
-        public ViewHolder(@NonNull View itemView) {
+        ViewHolder(@NonNull View itemView) {
             super(itemView);
             mCommentTv = itemView.findViewById(R.id.tv_comment);
         }

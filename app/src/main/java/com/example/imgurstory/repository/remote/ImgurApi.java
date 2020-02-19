@@ -17,7 +17,7 @@ public interface ImgurApi {
     String SERVER = "https://api.imgur.com/3/";
     String SCIENCE_TECH = "gallery/search?q_all=science AND tech&q_type=jpeg";
     String GALLERY_ITEM_TAGS = "gallery/{galleryHash}/tags";
-    String GALLERY_ITEM_COMMENTS = "gallery/{galleryHash}/comments}";
+    String GALLERY_ITEM_COMMENTS = "gallery/{galleryHash}/comments";
 
     @GET(SCIENCE_TECH)
     Call<CatagoryListResponse> getScienceTechCategoryList();
