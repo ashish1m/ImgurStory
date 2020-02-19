@@ -1,4 +1,4 @@
-package com.example.imgurstory.repository.remote.model;
+package com.example.imgurstory.repository.remote.model.catagory_response;
 
 public class Images {
     private int comment_count;

@@ -1,6 +1,8 @@
-package com.example.imgurstory.repository.remote.model;
+package com.example.imgurstory.repository.remote.model.catagory_response;
 
-public class Items {
+import java.util.ArrayList;
+
+public class ImageListData {
     private String comment_count;
 
     private String in_most_viral;
@@ -18,8 +20,6 @@ public class Items {
     private String cover_height;
 
     private String title;
-
-    private Ad_config ad_config;
 
     private String points;
 
@@ -43,7 +43,7 @@ public class Items {
 
     private String include_album_ads;
 
-    private Images[] images;
+    private ArrayList<Images> images;
 
     private String downs;
 
@@ -55,7 +55,7 @@ public class Items {
 
     private String images_count;
 
-    private Tags[] tags;
+    private ArrayList<Tags> tags;
 
     private String layout;
 
@@ -72,22 +72,6 @@ public class Items {
     private String topic;
 
     private String favorite;
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public int getVote() {
-        return vote;
-    }
-
-    public void setVote(int vote) {
-        this.vote = vote;
-    }
 
     public String getComment_count() {
         return comment_count;
@@ -151,14 +135,6 @@ public class Items {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public Ad_config getAd_config() {
-        return ad_config;
-    }
-
-    public void setAd_config(Ad_config ad_config) {
-        this.ad_config = ad_config;
     }
 
     public String getPoints() {
@@ -241,11 +217,11 @@ public class Items {
         this.include_album_ads = include_album_ads;
     }
 
-    public Images[] getImages() {
+    public ArrayList<Images> getImages() {
         return images;
     }
 
-    public void setImages(Images[] images) {
+    public void setImages(ArrayList<Images> images) {
         this.images = images;
     }
 
@@ -289,11 +265,11 @@ public class Items {
         this.images_count = images_count;
     }
 
-    public Tags[] getTags() {
+    public ArrayList<Tags> getTags() {
         return tags;
     }
 
-    public void setTags(Tags[] tags) {
+    public void setTags(ArrayList<Tags> tags) {
         this.tags = tags;
     }
 
@@ -363,6 +339,6 @@ public class Items {
 
     @Override
     public String toString() {
-        return "ClassPojo [comment_count = " + comment_count + ", in_most_viral = " + in_most_viral + ", ad_type = " + ad_type + ", link = " + link + ", description = " + description + ", privacy = " + privacy + ", section = " + section + ", cover_height = " + cover_height + ", title = " + title + ", ad_config = " + ad_config + ", points = " + points + ", cover = " + cover + ", score = " + score + ", datetime = " + datetime + ", favorite_count = " + favorite_count + ", id = " + id + ", topic_id = " + topic_id + ", in_gallery = " + in_gallery + ", vote = " + vote + ", views = " + views + ", include_album_ads = " + include_album_ads + ", images = " + images + ", downs = " + downs + ", nsfw = " + nsfw + ", is_ad = " + is_ad + ", ad_url = " + ad_url + ", images_count = " + images_count + ", tags = " + tags + ", layout = " + layout + ", account_id = " + account_id + ", cover_width = " + cover_width + ", is_album = " + is_album + ", account_url = " + account_url + ", ups = " + ups + ", topic = " + topic + ", favorite = " + favorite + "]";
+        return "ClassPojo [comment_count = " + comment_count + ", in_most_viral = " + in_most_viral + ", ad_type = " + ad_type + ", link = " + link + ", description = " + description + ", privacy = " + privacy + ", section = " + section + ", cover_height = " + cover_height + ", title = " + title + ", points = " + points + ", cover = " + cover + ", score = " + score + ", datetime = " + datetime + ", favorite_count = " + favorite_count + ", id = " + id + ", topic_id = " + topic_id + ", in_gallery = " + in_gallery + ", vote = " + vote + ", views = " + views + ", include_album_ads = " + include_album_ads + ", images = " + images + ", downs = " + downs + ", nsfw = " + nsfw + ", is_ad = " + is_ad + ", ad_url = " + ad_url + ", images_count = " + images_count + ", tags = " + tags + ", layout = " + layout + ", account_id = " + account_id + ", cover_width = " + cover_width + ", is_album = " + is_album + ", account_url = " + account_url + ", ups = " + ups + ", topic = " + topic + ", favorite = " + favorite + "]";
     }
 }

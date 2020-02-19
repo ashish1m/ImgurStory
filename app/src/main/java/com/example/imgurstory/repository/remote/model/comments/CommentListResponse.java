@@ -1,17 +1,18 @@
-package com.example.imgurstory.repository.remote.model;
+package com.example.imgurstory.repository.remote.model.comments;
 
-public class ImgurResponse {
-    private Data data;
+import java.util.ArrayList;
 
+public class CommentListResponse {
+
+    private ArrayList<CommentListData> data;
     private String success;
-
     private String status;
 
-    public Data getData() {
+    public ArrayList<CommentListData> getData() {
         return data;
     }
 
-    public void setData(Data data) {
+    public void setData(ArrayList<CommentListData> data) {
         this.data = data;
     }
 
