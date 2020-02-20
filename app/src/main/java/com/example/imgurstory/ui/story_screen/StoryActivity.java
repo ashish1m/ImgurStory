@@ -47,6 +47,7 @@ public class StoryActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onChanged(CatagoryListResponse catagoryListResponse) {
                 mImageListdata = catagoryListResponse.getData();
+                updateUI(0);
                 startTimer();
             }
         });
@@ -62,13 +63,13 @@ public class StoryActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void updateUI(int index) {
+        mTitleTv.setText(mImageListdata.get(index).getTitle());
         new DownloadImageTask(new DownloadImageTask.Observer() {
             @Override
             public void onComplete(Bitmap bitmap) {
                 mImageView.setImageBitmap(bitmap);
             }
         }).execute(mImageListdata.get(index).getImages().get(0).getLink());
-        mTitleTv.setText(mImageListdata.get(index).getTitle());
     }
 
     @Override
