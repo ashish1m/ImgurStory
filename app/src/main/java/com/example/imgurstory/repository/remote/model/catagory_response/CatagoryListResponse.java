@@ -4,15 +4,15 @@ import java.util.ArrayList;
 
 public class CatagoryListResponse {
 
-    private ArrayList<ImageListData> data;
+    private ArrayList<ImageData> data;
     private String success;
     private String status;
 
-    public ArrayList<ImageListData> getData() {
+    public ArrayList<ImageData> getData() {
         return data;
     }
 
-    public void setData(ArrayList<ImageListData> data) {
+    public void setData(ArrayList<ImageData> data) {
         this.data = data;
     }
 

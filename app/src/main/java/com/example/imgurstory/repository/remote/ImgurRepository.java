@@ -1,5 +1,7 @@
 package com.example.imgurstory.repository.remote;
 
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.imgurstory.ImgurStory;
@@ -13,7 +15,7 @@ import retrofit2.Response;
 public class ImgurRepository {
     private static ImgurRepository sInstance;
     private final ImgurApi mImgurStoryService;
-    private MutableLiveData<CatagoryListResponse> categoryListData;
+    private MediatorLiveData<CatagoryListResponse> categoryListData;
 
     private ImgurRepository() {
         mImgurStoryService = ImgurStory.getInstance().getRetrofit().create(ImgurApi.class);
@@ -30,7 +32,7 @@ public class ImgurRepository {
     }
 
     public void fetchData() {
-        categoryListData = new MutableLiveData<>();
+        categoryListData = new MediatorLiveData<>();
         mImgurStoryService.getScienceTechCategoryList().enqueue(new Callback<CatagoryListResponse>() {
             @Override
             public void onResponse(Call<CatagoryListResponse> call, Response<CatagoryListResponse> response) {
@@ -46,12 +48,12 @@ public class ImgurRepository {
         });
     }
 
-    public MutableLiveData<CatagoryListResponse> getCategoryList() {
+    public MediatorLiveData<CatagoryListResponse> getCategoryList() {
         return categoryListData;
     }
 
-    public MutableLiveData<CommentListResponse> getCommentsList(String imageId) {
-        MutableLiveData<CommentListResponse> commentListData = new MutableLiveData<>();
+    public MediatorLiveData<CommentListResponse> getCommentsList(String imageId) {
+        MediatorLiveData<CommentListResponse> commentListData = new MediatorLiveData<>();
         mImgurStoryService.getCommentsForImage(imageId).enqueue(new Callback<CommentListResponse>() {
             @Override
             public void onResponse(Call<CommentListResponse> call, Response<CommentListResponse> response) {

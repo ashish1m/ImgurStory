@@ -1,4 +1,4 @@
-package com.example.imgurstory.ui;
+package com.example.imgurstory.ui.util;
 
 import android.widget.Toast;
 

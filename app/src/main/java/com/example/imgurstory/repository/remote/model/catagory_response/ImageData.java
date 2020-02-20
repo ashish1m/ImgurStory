@@ -1,8 +1,10 @@
 package com.example.imgurstory.repository.remote.model.catagory_response;
 
+import androidx.lifecycle.LiveData;
+
 import java.util.ArrayList;
 
-public class ImageListData {
+public class ImageData {
     private String comment_count;
 
     private String in_most_viral;
