@@ -1,10 +1,9 @@
-package com.example.imgurstory.repository.remote;
+package com.example.imgurstory.repository;
 
-import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MediatorLiveData;
-import androidx.lifecycle.MutableLiveData;
 
 import com.example.imgurstory.ImgurStory;
+import com.example.imgurstory.repository.remote.ImgurApi;
 import com.example.imgurstory.repository.remote.model.catagory_response.CatagoryListResponse;
 import com.example.imgurstory.repository.remote.model.comments.CommentListResponse;
 

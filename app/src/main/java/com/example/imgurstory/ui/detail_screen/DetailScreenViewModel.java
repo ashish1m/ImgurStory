@@ -6,7 +6,7 @@ import androidx.lifecycle.MediatorLiveData;
 import androidx.lifecycle.Transformations;
 import androidx.lifecycle.ViewModel;
 
-import com.example.imgurstory.repository.remote.ImgurRepository;
+import com.example.imgurstory.repository.ImgurRepository;
 import com.example.imgurstory.repository.remote.model.catagory_response.CatagoryListResponse;
 import com.example.imgurstory.repository.remote.model.catagory_response.ImageData;
 import com.example.imgurstory.repository.remote.model.comments.CommentListResponse;

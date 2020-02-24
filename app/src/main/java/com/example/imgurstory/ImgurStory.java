@@ -3,7 +3,7 @@ package com.example.imgurstory;
 import android.app.Application;
 
 import com.example.imgurstory.repository.remote.ImgurApi;
-import com.example.imgurstory.repository.remote.ImgurRepository;
+import com.example.imgurstory.repository.ImgurRepository;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

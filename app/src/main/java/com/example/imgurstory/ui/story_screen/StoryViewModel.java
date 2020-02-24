@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.imgurstory.repository.remote.ImgurRepository;
+import com.example.imgurstory.repository.ImgurRepository;
 import com.example.imgurstory.repository.remote.model.catagory_response.CatagoryListResponse;
 
 public class StoryViewModel extends ViewModel {
